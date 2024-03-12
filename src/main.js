@@ -1,7 +1,15 @@
-import './assets/main.css'
-
 import { createApp } from 'vue'
 import App from './App.vue'
-import router from "./router";
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/js/bootstrap.js';
+import 'axios/dist/axios.min.js'
 
-createApp(App).use(router).mount('#app')
+//import axios from "axios";
+import router from '@/router';
+
+createApp(App).use(router).mount('#app');
+//.use(BootstrapVue)
+
+//Vue.prototype.$axios = axios;
+//app.config.globalProperties.$axios = axios;
+
