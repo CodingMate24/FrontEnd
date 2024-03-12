@@ -1,11 +1,13 @@
 <script>
+import axios from 'axios';
+
 export default {};
 
 
 // 테스트 코드 - 추후 반영예쩡
 let formData = {"test" : "test"};
 
-const LoginService = function () {
+const LoginService = new function () {
   axios.get('/api/user/login', formData, {
     headers: {
       "Content-Type": "application/json",
