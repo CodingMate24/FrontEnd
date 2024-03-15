@@ -3,7 +3,6 @@
 import {FontAwesomeIcon} from "@fortawesome/vue-fontawesome";
 import {ref, onBeforeMount} from "vue";
 import Router from "@/router/index.js";
-import router from "@/router/index.js";
 
 export default {
   computed: {
@@ -30,13 +29,7 @@ export default {
         </div>
       </div>
     </div>
-    <div class="row">
-      <div class="col">
-        <ul class="nav flex-column">
-          <router-link to="/logout" class="nav-item"><font-awesome-icon class="fa-1x icon-tmp" icon="arrow-right-from-bracket"/><span>로그아웃</span></router-link>
-        </ul>
-      </div>
-    </div>
+    <router-link to="/logout" class="nav-item position-absolute bottom-0" style="margin-bottom: 85px;"><font-awesome-icon class="fa-1x icon-tmp" icon="arrow-right-from-bracket"/><span>로그아웃</span></router-link>
   </div>
 </template>
 
@@ -45,7 +38,6 @@ export default {
     padding-top: 50px;
     padding-left: 30px;
     max-width: 300px;
-    border-right: #dee2e6 solid 1px;
     margin-top: 15px;
     margin-bottom: 15px;
     text-decoration: none;
@@ -53,7 +45,6 @@ export default {
 
   #sidebar {
     max-width: 300px;
-    height: 700px;
   }
 
   .nav-item {
