@@ -77,9 +77,10 @@ const LoginService = new function () {
     padding: 0 90px;
     height: 700px;
     margin-top: 50px;
+    min-width: 480px;
   }
   .icon_lock {
-    background: url('image/icons.png') no-repeat -130px -0px;
+    background: url('../assets/icons.png') no-repeat -130px -0px;
     width: 96px;
     height: 96px;
   }
