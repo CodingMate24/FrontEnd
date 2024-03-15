@@ -5,9 +5,19 @@ import 'bootstrap/dist/js/bootstrap.js';
 import  axios ,  { isCancel ,  AxiosError }  from  'axios' ;
 import router from '@/router';
 
-createApp(App).use(router).mount('#app');
-//.use(BootstrapVue)
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 
-//Vue.prototype.$axios = axios;
-//app.config.globalProperties.$axios = axios;
+import { fas } from '@fortawesome/free-solid-svg-icons'
+import { far } from '@fortawesome/free-regular-svg-icons'
+import { fab } from '@fortawesome/free-brands-svg-icons'
 
+library.add(fas, far, fab)
+
+const app = createApp(App)
+
+app.component('font-awesome-icon', FontAwesomeIcon)
+
+app.use(router)
+
+app.mount('#app');
