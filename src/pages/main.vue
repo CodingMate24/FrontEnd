@@ -39,9 +39,10 @@ export default {
         <LeftSection></LeftSection>
       </div>
       <div id="main-section" class="col-10 overflow-auto">
+        <img src="@/assets/banner_main.png" style="margin-left: 30px; margin-top: 20px; margin-bottom: 10px; height: 35px;" />
 
         <!-- main 게시물 시작 -->
-        <div class="card col-11 shadow p-3 mb-5 bg-body rounded" style="max-width: 1100px; min-height: 370px;">
+        <div class="card col-11 shadow p-3 mb-4 bg-body rounded" style="max-width: 1100px; min-height: 370px;">
           <div class="row g-0 border part" style="border-radius: 15px;" >
             <div class="col-md-6">
               <div class="row">
@@ -116,7 +117,7 @@ export default {
         <!-- main 게시물 끝 -->
 
         <!-- main 게시물 시작 -->
-        <div class="card col-11 shadow p-3 mb-5 bg-body rounded" style="max-width: 1100px; min-height: 370px;">
+        <div class="card col-11 shadow p-3 mb-4 bg-body rounded" style="max-width: 1100px; min-height: 370px;">
           <div class="row g-0 border part" style="border-radius: 15px;" >
             <div class="col-md-6">
               <div class="row">
@@ -200,7 +201,7 @@ export default {
 <style>
 .card {
   margin-top: 15px;
-  margin-left: 15px;
+  margin-left: 30px;
   min-width: 480px;
 }
 
