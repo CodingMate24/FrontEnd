@@ -24,10 +24,6 @@ export default {
    color: #2c3e50;
 }
 
-.row {
-  max-width: 1920px;
-}
-
 header {
   padding-left: 30px;
   padding-top: 15px;
