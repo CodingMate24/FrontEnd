@@ -39,7 +39,7 @@ const router = createRouter({
         {
             path: "/find",
             name: "find",
-            component: () => import("../pages/main.vue"),
+            component: () => import("../pages/find/find.vue"),
             title : "검색",
             icon : "magnifying-glass",
             menu : true
