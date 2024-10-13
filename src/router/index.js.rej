@@ -1,0 +1,9 @@
+diff a/src/router/index.js b/src/router/index.js	(rejected hunks)
+@@ -39,7 +39,6 @@
+         {
+             path: "/find",
+             name: "find",
+-            component: () => import("../pages/main.vue"),
+             component: () => import("../pages/find/find.vue"),
+             title : "검색",
+             icon : "magnifying-glass",
