@@ -34,11 +34,12 @@ export default {};
             <div id= "icon_kakao"></div>
             <div id = "icon_naver"></div>
             <div id = "icon_google"></div>
-          </div>
+            <div id = "icon_facebook"></div>
         </div>
       </div>
       </div>
     </div>
+  </div>
   </div>
 </template>
 
@@ -78,8 +79,8 @@ export default {};
     width: 55px;
     height: 55px;
     display: flex;
-    margin-left: 30px;
-    margin-right: 20px;
+    margin-left: 12px;
+    margin-right: 12px;
   }
   #icon_naver {
     background: url('../assets/naverLogo.png') no-repeat;
@@ -87,8 +88,8 @@ export default {};
     width: 55px;
     height: 55px;
     display: flex;
-    margin-left: 30px;
-    margin-right: 20px;
+    margin-left: 12px;
+    margin-right: 12px;
   }
   #icon_google {
     background: url('../assets/googleLogo.png') no-repeat;
@@ -96,8 +97,17 @@ export default {};
     width: 55px;
     height: 55px;
     display: flex;
-    margin-left: 30px;
-    margin-right: 20px;
+    margin-left: 12px;
+    margin-right: 12px;
+  }
+  #icon_facebook {
+    background: url('../assets/facebook-icon.png') no-repeat;
+    background-size: cover;
+    width: 55px;
+    height: 55px;
+    display: flex;
+    margin-left: 12px;
+    margin-right: 12px;
   }
 
 </style>
