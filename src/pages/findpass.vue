@@ -36,7 +36,7 @@ const LoginService = new function () {
         <p>가입할 때 입력한 이메일을 입력해 주세요.</p>
       </div>
       <div class="row d-grid gap-2">
-        <input id="email" class="form-control" type="text" placeholder="이메일을 입력해주세요." aria-label="default input example">
+        <input id="email" class="form-control-lg" type="text" placeholder="이메일을 입력해주세요." aria-label="default input example">
         <div id="passwordHelpBlock" class="form-text visually-hidden" style="color: red;">
           해당 계정을 찾을 수 없습니다.
         </div>
