@@ -1,16 +1,38 @@
 // router/index.js
 import {createRouter, createWebHistory} from "vue-router";
+import {Transaction} from "@/router/Transaction.js";
 
+const modules = import.meta.glob("@/pages/**/*.vue");
+const resolveComponentPath = path => {
+    const resolvePath = path.replace("@/", "./");
+    console.log("modules[resolvePath]: ", modules[resolvePath]);
+    return modules[resolvePath];
+};
+const menuList = await Transaction.sendTransaction('GET','/api/menu/menuList' , {'st':'11'});
+console.log("aaaa >> ", menuList);
+
+const routes = menuList.map(menuItem => {
+    return {
+        "menu": menuItem["menuUrl"]
+        , "name": menuItem["menuName"]
+        , "component": () => resolveComponentPath(menuItem["menuComponent"])
+        , "title": menuItem["menuTitle"]
+        , "icon": menuItem["menuIcon"]
+        , "menuType": menuItem["menuType"]
+    };
+});
+console.log("routes: ", routes);
 const router = createRouter({
-    history: createWebHistory(""),
-    routes: [
+    "history": createWebHistory(""),
+    "routes": routes,
+        /* [
         {
-              path: "/"
+            menu: "/"
             , name: "home"
             , component: () => import("../pages/login.vue")
             , title : "로그인"
             , icon : ""
-            , menu : false
+            , menuType : "S"
         },
         {
             path: "/login",
@@ -18,15 +40,15 @@ const router = createRouter({
             component: () => import("../pages/login.vue"),
             title : "로그인",
             icon : "",
-            menu : false
-    },
+            menuType : "S"
+        },
         {
             path: "/findpass",
             name: "findpass",
             component: () => import("../pages/findpass.vue"),
             title : "비밀번호 찾기",
             icon : "",
-            menu : false
+            menuType : "S"
         },
         {
             path: "/main",
@@ -34,7 +56,7 @@ const router = createRouter({
             component: () => import("../pages/main.vue"),
             title : "홈",
             icon : "house",
-            menu : true
+            menuType : "M"
         },
         {
             path: "/find",
@@ -42,7 +64,7 @@ const router = createRouter({
             component: () => import("../pages/find/find.vue"),
             title : "검색",
             icon : "magnifying-glass",
-            menu : true
+            menuType : "M"
         },
         {
             path: "/write",
@@ -50,7 +72,7 @@ const router = createRouter({
             component: () => import("../pages/main.vue"),
             title : "만들기",
             icon : "plus",
-            menu : true
+            menuType : "M"
         },
         {
             path: "/profile",
@@ -58,7 +80,7 @@ const router = createRouter({
             component: () => import("../pages/main.vue"),
             title : "프로필",
             icon : "user",
-            menu : true
+            menuType : "M"
         },
         {
             path: "/logout",
@@ -66,8 +88,10 @@ const router = createRouter({
             component: () => import("../pages/main.vue"),
             title : "로그아웃",
             icon : "",
-            menu : false
+            menuType : "S"
         },
     ],
+    */
 });
+
 export default router;
