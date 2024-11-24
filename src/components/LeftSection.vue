@@ -13,10 +13,15 @@ export default {
 
     onBeforeMount(()=>{
       routes.value = Router.options.routes;
-    })
+    }
+
+    )
 
     return{routes};
   },
+  methods:{
+
+  }
 }
 </script>
 
@@ -24,7 +29,7 @@ export default {
   <div id="left-section">
     <div id="sidebar" class="row">
       <div class="col">
-        <div class="nav flex-column" v-for="route in routes.filter((c) => c.menu === true)" :key="route">
+        <div class="nav flex-column" v-for="route in routes.filter((c) => c.menuType === 'M')" :key="route">
           <router-link :to="route.path" class="nav-item"><font-awesome-icon class="fa-1x icon-tmp" :icon="route.icon"/><span>{{route.title}}</span></router-link>
         </div>
       </div>

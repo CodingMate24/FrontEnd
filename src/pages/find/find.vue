@@ -6,10 +6,12 @@ import Find_begin from "@/pages/find/component/find_begin.vue";
 import Find_result from "@/pages/find/component/find_result.vue";
 import {FontAwesomeIcon} from "@fortawesome/vue-fontawesome";
 import Router from "@/router/index.js";
+import AxiosInst from '@/main.js';
 import {ref, onBeforeMount} from "vue";
 
 export default {
   components: {FontAwesomeIcon, Footer, Header, LeftSection, Find_result, Find_begin },
+
   setup(){
     const routes = ref([])
 
@@ -20,15 +22,26 @@ export default {
     return(routes);
   },
   methods:{
-    heartClick(url){
-
-    },
-    commentWright(wrightYn){
-      if(wrightYn){
+    heartClick(){
+      return AxiosInst(
+          { method: "GET",
+               url: "/api/test/connect?input=테스트",
+              data: {},
+            header: {
+              "Context-Type": "application/json",
+            },
+          }
+      )
+      .then( (res)=>{
+        //성공했을 경우
+        console.log("성공",res);
+        alert(res.data);
+      })
+      .catch( (res) => {
+        //실패했을 경우
+        console.error("실패",res);});
       }
-
     }
-  }
 
 };
 </script>
@@ -48,13 +61,12 @@ export default {
               <div class="input-group mb-3">
                 <label class="input-group-text"><font-awesome-icon icon="magnifying-glass" style="font-size: 17px;"/></label>
                 <input type="text" class="form-control rounded-end" placeholder="검색어를 입력해주세요." aria-label="searchWord" aria-describedby="basic-addon1" style="margin-right: 5px;">
-                <button class="btn btn-secondary rounded" type="button" id="button-addon2" style="z-index: 99;"><font-awesome-icon class="align-middle" icon="magnifying-glass" style="margin-right: 5px;"/>검색</button>
+                <button v-on:click="heartClick" class="btn btn-secondary rounded" type="button" id="button-addon2" style="z-index: 99;"><font-awesome-icon class="align-middle" icon="magnifying-glass" style="margin-right: 5px;"/>검색</button>
               </div>
             </div>
           </div>
-
-          <Find_begin class="visually-hidden"></Find_begin>
-          <Find_result></Find_result>
+          <Find_begin ></Find_begin>
+          <Find_result class="visually-hidden"></Find_result>
 
         <!-- END -->
         </div>
