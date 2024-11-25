@@ -2,30 +2,14 @@
 import {createRouter, createWebHistory} from "vue-router";
 import {Transaction} from "@/router/Transaction.js";
 
-const modules = import.meta.glob("@/pages/**/*.vue");
-const resolveComponentPath = path => {
-    const resolvePath = path.replace("@/", "./");
-    console.log("modules[resolvePath]: ", modules[resolvePath]);
-    return modules[resolvePath];
-};
+debugger;
+
 const menuList = await Transaction.sendTransaction('GET','/api/menu/menuList' , {'st':'11'});
 console.log("aaaa >> ", menuList);
 
-const routes = menuList.map(menuItem => {
-    return {
-        "menu": menuItem["menuUrl"]
-        , "name": menuItem["menuName"]
-        , "component": () => resolveComponentPath(menuItem["menuComponent"])
-        , "title": menuItem["menuTitle"]
-        , "icon": menuItem["menuIcon"]
-        , "menuType": menuItem["menuType"]
-    };
-});
-console.log("routes: ", routes);
 const router = createRouter({
     "history": createWebHistory(""),
-    "routes": routes,
-        /* [
+    "routes":  [
         {
             menu: "/"
             , name: "home"
@@ -91,7 +75,6 @@ const router = createRouter({
             menuType : "S"
         },
     ],
-    */
 });
 
 export default router;
