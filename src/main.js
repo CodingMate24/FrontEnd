@@ -3,7 +3,7 @@ import App from './App.vue'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.js';
 import  axios ,  { isCancel ,  AxiosError }  from  'axios' ;
-import router from '@/router';
+import router, {addArr, addDynamicRoute} from '@/router';
 
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
@@ -29,6 +29,12 @@ AxiosInst.interceptors.request.use(
         return config;
     }
 )
+
+const menuList = await Transaction.sendTransaction('GET','/api/menu/menuList' , {'st':'11'});
+
+addDynamicRoute(menuList);
+addArr(menuList);
+
 export default AxiosInst;
 
 library.add(fas, far, fab)

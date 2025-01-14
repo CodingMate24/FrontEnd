@@ -1,22 +1,31 @@
 // router/index.js
 import {createRouter, createWebHistory} from "vue-router";
-import {Transaction} from "@/router/Transaction.js";
 
-debugger;
-
-const menuList = await Transaction.sendTransaction('GET','/api/menu/menuList' , {'st':'11'});
-console.log("aaaa >> ", menuList);
+// 기본 라우트 설정
+const routes = [
+    {
+        menu: "/error"
+        , name: 'error'
+        , component: () => import(`@/pages/login.vue`)
+        , title: "ERROR PAGES"
+        , icon: ""
+        , menuType: "S"
+        , path: '/error'
+    },
+];
 
 const router = createRouter({
-    "history": createWebHistory(""),
-    "routes":  [
+    history: createWebHistory(""),
+    routes,
+        /*
+        [
         {
             menu: "/"
             , name: "home"
             , component: () => import("../pages/login.vue")
             , title : "로그인"
             , icon : ""
-            , menuType : "S"
+            , menuTypes : "S"
         },
         {
             path: "/login",
@@ -24,7 +33,7 @@ const router = createRouter({
             component: () => import("../pages/login.vue"),
             title : "로그인",
             icon : "",
-            menuType : "S"
+            menuTypes : "S"
         },
         {
             path: "/findpass",
@@ -32,7 +41,7 @@ const router = createRouter({
             component: () => import("../pages/findpass.vue"),
             title : "비밀번호 찾기",
             icon : "",
-            menuType : "S"
+            menuTypes : "S"
         },
         {
             path: "/main",
@@ -40,7 +49,7 @@ const router = createRouter({
             component: () => import("../pages/main.vue"),
             title : "홈",
             icon : "house",
-            menuType : "M"
+            menuTypes : "M"
         },
         {
             path: "/find",
@@ -48,7 +57,7 @@ const router = createRouter({
             component: () => import("../pages/find/find.vue"),
             title : "검색",
             icon : "magnifying-glass",
-            menuType : "M"
+            menuTypes : "M"
         },
         {
             path: "/write",
@@ -56,7 +65,7 @@ const router = createRouter({
             component: () => import("../pages/main.vue"),
             title : "만들기",
             icon : "plus",
-            menuType : "M"
+            menuTypes : "M"
         },
         {
             path: "/profile",
@@ -64,7 +73,7 @@ const router = createRouter({
             component: () => import("../pages/main.vue"),
             title : "프로필",
             icon : "user",
-            menuType : "M"
+            menuTypes : "M"
         },
         {
             path: "/logout",
@@ -72,9 +81,56 @@ const router = createRouter({
             component: () => import("../pages/main.vue"),
             title : "로그아웃",
             icon : "",
-            menuType : "S"
+            menuTypes : "S"
         },
     ],
+     */
 });
+
+// 동적으로 라우트를 추가하는 함수
+export function addDynamicRoute(menuList) {
+    for(let i=0; i<menuList.length; i++){
+        const menuComp = menuList[i].menuComponent;
+
+        if(menuList[i].menuName === "find"){
+            const menuItem = {
+                menu: menuList[i].menuUrl
+                , name: menuList[i].menuName
+                , component: () => import(`@/pages/find/${menuComp}.vue`)
+                , title: menuList[i].menuTitle
+                , path: menuList[i].menuUrl
+            }
+
+            // 라우터에 동적 라우트 추가
+            router.addRoute(menuItem);
+        } else {
+            const menuItem = {
+                menu: menuList[i].menuUrl
+                , name: menuList[i].menuName
+                , component: () => import(`@/pages/${menuComp}.vue`)
+                , title: menuList[i].menuTitle
+                , path: menuList[i].menuUrl
+            }
+            // 라우터에 동적 라우트 추가
+            router.addRoute(menuItem);
+        }
+
+    }
+}
+
+export function addArr(menuList) {
+    for(let i=0; i<menuList.length; i++){
+        const menuItem = {
+            menu: menuList[i].menuUrl
+            , name: menuList[i].menuName
+            , title: menuList[i].menuTitle
+            , icon: menuList[i].menuIcon
+            , menuType: menuList[i].menuType
+        }
+
+        // 라우터에 동적 라우트 추가
+        routes.push(menuItem);
+    }
+}
 
 export default router;
