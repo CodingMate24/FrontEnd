@@ -220,14 +220,15 @@ export default {
 
 <style>
 .main-view {
-    margin-left: 30px;
-    margin-right: 30px;
+    margin-left: 15px;
+    margin-right: 15px;
     margin-top: 20px;
 }
 
 .card {
   margin-top: 0;
   margin-left: 0;
+  min-width: 400px;
 }
 
 .card-body {
@@ -277,11 +278,5 @@ export default {
   cursor: pointer;
   text-decoration: underline;
   font-weight: bold;
-}
-
-#content-section {
-  height: 820px;
-  border-left: #dee2e6 solid 1px;
-  --bs-gutter-x: 0;
 }
 </style>

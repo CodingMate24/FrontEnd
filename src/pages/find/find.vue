@@ -53,7 +53,7 @@ export default {
       <div class="col-2">
         <LeftSection></LeftSection>
       </div>
-      <div id="main-section" class="col-10 overflow-auto">
+      <div id="content-section" class="col-10 overflow-auto">
         <div id="find_main">
         <!-- START -->
           <div class="row">
@@ -78,11 +78,6 @@ export default {
 </template>
 
 <style>
-#main-section {
-  height: 820px;
-  border-left: #dee2e6 solid 1px;
-  --bs-gutter-x: 0;
-}
 
 #find_main {
   margin-left: 30px;

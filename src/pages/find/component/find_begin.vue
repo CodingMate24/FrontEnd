@@ -288,7 +288,7 @@ export default {
 .card {
   margin-top: 0;
   margin-left: 0;
-  min-width: 411px;
+  min-width: 0px;
 }
 
 .card-body {

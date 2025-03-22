@@ -33,7 +33,7 @@ export default {
         </div>
       </div>
     </div>
-    <router-link to="/logout" class="nav-item position-absolute bottom-0" style="margin-bottom: 85px;"><font-awesome-icon class="fa-1x icon-tmp" icon="arrow-right-from-bracket"/><span>로그아웃</span></router-link>
+<!--    <router-link to="/logout" class="nav-item position-absolute bottom-0" style="margin-bottom: 10%;"><font-awesome-icon class="fa-1x icon-tmp" icon="arrow-right-from-bracket"/><span>로그아웃</span></router-link>-->
   </div>
 </template>
 

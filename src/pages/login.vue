@@ -1,5 +1,12 @@
 <script>
-export default {};
+
+export default {
+  methods: {
+    chk_login() {
+      document.location.href = "/main";
+    }
+  }
+};
 </script>
 
 <template>
@@ -22,8 +29,10 @@ export default {};
               <div class="row d-grid gap-2">
                 <input id="email" class="form-control" type="text" placeholder="이메일을 입력해주세요." aria-label="default input example">
                 <input id="password" class="form-control" type="text" placeholder="비밀번호를 입력해주세요." aria-label="default input example">
-                <button id="'signin'" class="btn text-white btn-lg" style="background-color: #53bdeb; padding: 1px; font-size : 17px;font-weight: 700; ">로그인</button>
+                <button id="'signin'" class="btn text-white btn-lg" style="background-color: #53bdeb; padding: 1px; font-size : 17px;font-weight: 700; " @click="chk_login()">로그인</button>
               </div>
+              <span style="float:right; font-size: 13px; margin-top: 8px;"><a href="/findpass" style="text-decoration: none;  color: #999;">비밀번호를 잊으셨나요?</a></span>
+              <br/>
               <br/>
               <div class="row text-center">
                 <div class="col-4"><hr/></div>

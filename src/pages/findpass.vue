@@ -65,7 +65,7 @@ const LoginService = new function () {
     margin: 0 auto;
   }
   #findPass {
-    min-height: 800px;
+    height: calc(100vh - 172px);
   }
   #lockLogo {
     margin-top: 60px;
@@ -75,9 +75,9 @@ const LoginService = new function () {
   }
   #main-content {
     padding: 0 90px;
-    height: 700px;
+    height: 650px;
     margin-top: 50px;
-    min-width: 480px;
+    width: 480px;
   }
   .icon_lock {
     background: url('../assets/icons.png') no-repeat -130px -0px;

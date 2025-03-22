@@ -11,6 +11,12 @@ export default {}
 </script>
 
 <style>
+#footer {
+  height: 90px;
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+}
 footer {
   padding-left: 30px;
   padding-top: 15px;

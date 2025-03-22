@@ -7,11 +7,23 @@
 <script>
 import Header from "@/components/Header.vue";
 import Footer from "@/components/Footer.vue";
+import {FontAwesomeIcon} from "@fortawesome/vue-fontawesome";
+import {ref, onBeforeMount} from "vue";
+import Router from "@/router/index.js";
 
 export default {
   name: 'App',
-  components : {Header, Footer},
-  setup() {},
+  components : {Header, Footer, FontAwesomeIcon},
+  setup() {
+    const routes = ref([]);
+
+    onBeforeMount(()=>{
+          routes.value = Router.options.routes;
+        }
+
+    )
+    return{routes};
+  },
 }
 
 </script>
