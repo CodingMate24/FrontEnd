@@ -1,9 +1,32 @@
 <script>
+import {Transaction} from "@/router/Transaction.js";
 
 export default {
+  data: function() {
+    // 빈 문자열 데이터 init
+    return {
+      email: '',
+      password: '',
+    }
+  },
   methods: {
-    chk_login() {
-      document.location.href = "/main";
+    async chk_login() {
+      const login = await Transaction.sendTransaction('POST', '/api/login', {
+        'mbrEmail': this.email,
+        'mbrPw': this.password
+      });
+
+      console.log("result :: " + login.accessToken)
+
+      if(login.resultCode === 200){
+        if (login.accessToken !== "" || login.accessToken !== null) {
+          document.location.href = "/main";
+        } else {
+          alert(login.failMsg);
+        }
+      } else {
+        alert(login.failMsg);
+      }
     }
   }
 };
@@ -27,8 +50,8 @@ export default {
                 <div class="icon_logo" />
               </div>
               <div class="row d-grid gap-2">
-                <input id="email" class="form-control" type="text" placeholder="이메일을 입력해주세요." aria-label="default input example">
-                <input id="password" class="form-control" type="text" placeholder="비밀번호를 입력해주세요." aria-label="default input example">
+                <input id="email" v-model="email" class="form-control" type="text" placeholder="이메일을 입력해주세요." aria-label="default input example">
+                <input id="password" v-model="password" class="form-control" type="password" placeholder="비밀번호를 입력해주세요." aria-label="default input example">
                 <button id="'signin'" class="btn text-white btn-lg" style="background-color: #53bdeb; padding: 1px; font-size : 17px;font-weight: 700; " @click="chk_login()">로그인</button>
               </div>
               <span style="float:right; font-size: 13px; margin-top: 8px;"><a href="/findpass" style="text-decoration: none;  color: #999;">비밀번호를 잊으셨나요?</a></span>

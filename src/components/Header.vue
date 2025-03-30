@@ -55,6 +55,7 @@ header {
   color: #000;
   height: 35px;
   margin: 0px;
+  padding-top: 5px;
 }
 #main-section {
   height: calc(100vh - 172px);

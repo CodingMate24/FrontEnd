@@ -42,6 +42,7 @@ export default {
     padding-top: 50px;
     padding-left: 30px;
     max-width: 300px;
+    min-width: 100px;
     margin-top: 15px;
     margin-bottom: 15px;
     text-decoration: none;
@@ -73,9 +74,14 @@ export default {
     }
   }
 
+  @media (min-width:980px) {
+
+  }
+
   @media (min-width:200px) and (max-width:480px) {
     #left-section {
-      padding-left: 20px;
+      padding-left: 22px;
+      min-width: 100px;
     }
   }
 
