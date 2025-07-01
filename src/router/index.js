@@ -1,5 +1,8 @@
 // router/index.js
 import {createRouter, createWebHistory} from "vue-router";
+import {Transaction} from "@/router/Transaction.js";
+
+const menuList = await Transaction.sendTransaction('GET','/api/menu/menuList' , {'st':'11'});
 
 // 기본 라우트 설정
 const routes = [
@@ -88,11 +91,11 @@ const router = createRouter({
 });
 
 // 동적으로 라우트를 추가하는 함수
-export function addDynamicRoute(menuList) {
+export function addDynamicRoute() {
     for(let i=0; i<menuList.length; i++){
         const menuComp = menuList[i].menuComponent;
 
-        if(menuList[i].menuName === "find"){
+        if(menuList[i].menuName === "find" || menuList[i].menuName === "result"){
             const menuItem = {
                 menu: menuList[i].menuUrl
                 , name: menuList[i].menuName
@@ -118,7 +121,7 @@ export function addDynamicRoute(menuList) {
     }
 }
 
-export function addArr(menuList) {
+export function addArr() {
     for(let i=0; i<menuList.length; i++){
         const menuItem = {
             menu: menuList[i].menuUrl

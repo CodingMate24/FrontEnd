@@ -2,14 +2,14 @@
 import Header from "@/components/Header.vue";
 import Footer from "@/components/Footer.vue";
 import LeftSection from "@/components/LeftSection.vue";
-import Find_begin from "@/pages/find/component/find_begin.vue";
+import Find_result from "@/pages/find/component/find_result.vue";
 import {FontAwesomeIcon} from "@fortawesome/vue-fontawesome";
 import Router from "@/router/index.js";
 import AxiosInst from '@/main.js';
 import {ref, onBeforeMount} from "vue";
 
 export default {
-  components: {FontAwesomeIcon, Footer, Header, LeftSection, Find_begin },
+  components: {FontAwesomeIcon, Footer, Header, LeftSection, Find_result},
 
   setup(){
     const routes = ref([])
@@ -46,7 +46,7 @@ export default {
 </script>
 
 <template>
-  <div id="find">
+  <div id="findresult">
     <Header></Header>
     <div id="main-section" class="row">
       <div class="col-2">
@@ -64,7 +64,7 @@ export default {
               </div>
             </div>
           </div>
-          <Find_begin ></Find_begin>
+          <Find_result></Find_result>
 
         <!-- END -->
         </div>
