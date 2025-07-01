@@ -14,7 +14,7 @@ import { fab } from '@fortawesome/free-brands-svg-icons'
 import {Transaction} from "@/router/Transaction.js";
 
 const AxiosInst = axios.create({
-    baseURL : 'http://localhost:8080'
+    baseURL : 'http://localhost:9090'
 })
 
 // 모든 요청을 intercept 해서 header값 설정(토큰)

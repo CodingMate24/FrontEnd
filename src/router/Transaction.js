@@ -4,7 +4,7 @@ export class Transaction {
 
     static sendTransaction(method, url, param){
         const AxiosInst = Axios.create({
-            baseURL : 'http://localhost:8080'
+            baseURL : 'http://localhost:9090'
         })
 
         // 모든 요청을 intercept 해서 header값 설정(토큰)
