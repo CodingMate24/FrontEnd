@@ -54,7 +54,6 @@ export default {
                   <button id="'signin'" class="btn text-white btn-lg" style="background-color: #53bdeb; padding: 1px; font-size : 17px;font-weight: 700; height: 50px;" @click="chk_login()">로그인</button>
                 </div>
               </div>
-              <span style="text-align: right; font-size: 13px; margin-top: 10px; margin-right: 10px;"><a href="/findpass" style="text-decoration: none;  color: #999;">비밀번호를 잊으셨나요?</a></span>
               <div class="row center-line">
                 <div class="col-4"><hr/></div>
                 <div class="col-4">또는</div>
@@ -65,6 +64,12 @@ export default {
                 <div id = "icon_naver" class="social-icon"></div>
                 <div id = "icon_google" class="social-icon"></div>
                 <div id = "icon_facebook" class="social-icon"></div>
+              </div>
+              <br/>
+              <div class="btn-groups">
+                <a href="/">일반 회원가입</a>
+                &nbsp;&nbsp;&nbsp; / &nbsp;&nbsp;&nbsp;
+                <a href="/findpass">비밀번호 찾기</a>
               </div>
             </div>
           </div>
@@ -91,9 +96,6 @@ export default {
   #main-content {
     padding: 0 60px;
     height: 450px;
-  }
-  #socialLogin{
-    height: 700px;
   }
   .icon_logo{
     background: url('../assets/logo_1.png') no-repeat center;
@@ -123,8 +125,8 @@ export default {
   }
 
   .center-line {
-    margin-top: 15px;
-    margin-bottom: 15px;
+    margin-top: 20px;
+    margin-bottom: 20px;
   }
   #socialLogin {
     display: flex;
@@ -163,5 +165,20 @@ export default {
     background: url('../assets/facebook-icon.png') no-repeat;
     background-size: contain;
   }
-
+  .btn-groups{
+    text-align: center;
+    font-size: 13px;
+    margin-top: 10px;
+    margin-right: 10px;
+    color: #999;
+  }
+  .btn-groups > a {
+    font-size: 1.0rem;
+    text-decoration: none;
+    color: #888;
+  }
+  .btn-groups > a:hover {
+    font-weight: bold;
+    text-decoration: underline;
+  }
 </style>
