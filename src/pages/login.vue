@@ -33,48 +33,45 @@ export default {
 </script>
 
 <template>
-  <div class="row">
-    <div class="col-xs-0 col-lg-3 ">
+  <div id="login" class="row">
+    <div class="col-1">
     </div>
-      <div id="login" class="col-xs-12 col-lg-6 ">
-        <div class="row">
-          <div class="col-xs-0 col-lg-6 loginLayer">
-            <div id="loginImage" >
-              <div class="col-xs-12 col-lg-12 login_image" />
-            </div>
-          </div>
-          <div class="col-xs-12 col-lg-6 loginLayer">
-            <div id="main-content" class="col-xs-12 col-lg-8">
+    <div class="col-10">
+      <div class="row div-center">
+        <div class="col-md-6 col-lg-6 loginLayer">
+          <div class="login_image"></div>
+        </div>
+        <div class="col-md-6 col-lg-6 loginLayer">
+          <div id="main-content">
             <div id="login-form">
               <div id="iconLogo" class="row">
-                <div class="icon_logo" />
+                <div class="icon_logo"></div>
               </div>
-              <div class="row d-grid gap-2">
-                <input id="email" v-model="email" class="form-control" type="text" placeholder="이메일을 입력해주세요." aria-label="default input example">
-                <input id="password" v-model="password" class="form-control" type="password" placeholder="비밀번호를 입력해주세요." aria-label="default input example">
-                <button id="'signin'" class="btn text-white btn-lg" style="background-color: #53bdeb; padding: 1px; font-size : 17px;font-weight: 700; " @click="chk_login()">로그인</button>
+              <div class="row">
+                <div class="col-12 d-grid gap-2">
+                  <input id="email" v-model="email" class="form-control" type="text" placeholder="이메일을 입력해주세요." aria-label="default input example">
+                  <input id="password" v-model="password" class="form-control" type="password" placeholder="비밀번호를 입력해주세요." aria-label="default input example">
+                  <button id="'signin'" class="btn text-white btn-lg" style="background-color: #53bdeb; padding: 1px; font-size : 17px;font-weight: 700; height: 50px;" @click="chk_login()">로그인</button>
+                </div>
               </div>
-              <span style="float:right; font-size: 13px; margin-top: 8px;"><a href="/findpass" style="text-decoration: none;  color: #999;">비밀번호를 잊으셨나요?</a></span>
-              <br/>
-              <br/>
-              <div class="row text-center">
+              <span style="text-align: right; font-size: 13px; margin-top: 10px; margin-right: 10px;"><a href="/findpass" style="text-decoration: none;  color: #999;">비밀번호를 잊으셨나요?</a></span>
+              <div class="row center-line">
                 <div class="col-4"><hr/></div>
                 <div class="col-4">또는</div>
                 <div class="col-4"><hr/></div>
               </div>
-              <br/>
-              <div id = "socialLogin" class="row">
+              <div id = "socialLogin">
                 <div id= "icon_kakao" class="social-icon"></div>
                 <div id = "icon_naver" class="social-icon"></div>
                 <div id = "icon_google" class="social-icon"></div>
                 <div id = "icon_facebook" class="social-icon"></div>
+              </div>
             </div>
-          </div>
           </div>
         </div>
       </div>
     </div>
-    <div class="col-xs-0 col-lg-3 ">
+    <div class="col-1">
     </div>
   </div>
 </template>
@@ -82,15 +79,19 @@ export default {
 <style>
   #login{
     height: 700px;
-    margin-top: 50px;
+    margin-top: 150px;
     text-align: center;
+    display: flex;
+    justify-content: center;
+  }
+  .div-center{
+    display: flex;
+    justify-content: center;
   }
   #main-content {
-    padding: 0 90px;
+    padding: 0 60px;
     height: 450px;
-    margin-top: 50px;
-    min-width: 480px;
-   }
+  }
   #socialLogin{
     height: 700px;
   }
@@ -99,59 +100,68 @@ export default {
     width: 500px;
     height: 96px;
   }
+
   .loginLayer{
-    padding: 50px 0px;
+    padding: 0;
+    display: flex;
+    max-width: 600px;
+    justify-content: center;
+    align-items: center;
   }
+
   .login_image {
-    background: url('/src/assets/study.png') no-repeat center;
+    background: url('../assets/study.png') no-repeat center;
     background-size: contain;
-    min-width: 300px;
-    max-width: 450px;
-    height: 450px;
-    margin-top: 50px;
-    margin-left: 50px;
+    width: 100%;
+    min-height: 450px;
+  }
+  #main-content > div{
+    display: flex;
+    height: 480px;
+    width: 400px;
+    flex-direction: column;
+  }
+
+  .center-line {
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+  #socialLogin {
+    display: flex;
+    justify-content: center;
+  }
+
+  .social-icon {
+    align-items: center;
+    border-radius: 10%;
+    width: 55px;
+    height: 55px;
+    margin-left: 12px;
+    margin-right: 12px;
+  }
+
+  .social-icon:hover {
+    cursor: pointer;
+    border: 1px solid transparent;
   }
 
   #icon_kakao {
-    background: url('../assets/kakaoLogo.png') no-repeat ;
-    background-size: cover;
-    width: 55px;
-    height: 55px;
-    display: flex;
-    margin-left: 12px;
-    margin-right: 12px;
+    background: url('../assets/kakaoLogo.png') no-repeat;
+    background-size: contain;
   }
-  .social-icon:hover {
-    cursor: pointer;
-    background-color: #282828;
-  }
+
   #icon_naver {
     background: url('../assets/naverLogo.png') no-repeat;
-    background-size: cover;
-    width: 55px;
-    height: 55px;
-    display: flex;
-    margin-left: 12px;
-    margin-right: 12px;
+    background-size: contain;
   }
 
   #icon_google {
     background: url('../assets/googleLogo.png') no-repeat;
-    background-size: cover;
-    width: 55px;
-    height: 55px;
-    display: flex;
-    margin-left: 12px;
-    margin-right: 12px;
+    background-size: contain;
   }
   #icon_facebook {
     background: url('../assets/facebook-icon.png') no-repeat;
-    background-size: cover;
-    width: 55px;
-    height: 55px;
-    display: flex;
-    margin-left: 12px;
-    margin-right: 12px;
+    background-size: contain;
   }
 
 </style>
