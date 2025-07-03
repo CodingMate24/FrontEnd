@@ -48,7 +48,7 @@ export default {
                 <div class="icon_logo"></div>
               </div>
               <div class="row">
-                <div class="col-12 d-grid gap-2">
+                <div class="col-12 d-grid gap-3">
                   <input id="email" v-model="email" class="form-control" type="text" placeholder="이메일을 입력해주세요." aria-label="default input example">
                   <input id="password" v-model="password" class="form-control" type="password" placeholder="비밀번호를 입력해주세요." aria-label="default input example">
                   <button id="'signin'" class="btn text-white btn-lg" style="background-color: #53bdeb; padding: 1px; font-size : 17px;font-weight: 700; height: 50px;" @click="chk_login()">로그인</button>
@@ -89,6 +89,12 @@ export default {
     display: flex;
     justify-content: center;
   }
+  @media (max-width: 768px) {
+    #login{
+      margin-top: 30px;
+    }
+  }
+
   .div-center{
     display: flex;
     justify-content: center;
