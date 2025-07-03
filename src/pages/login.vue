@@ -67,7 +67,7 @@ export default {
               </div>
               <br/>
               <div class="btn-groups">
-                <a href="/">일반 회원가입</a>
+                <a href="/signup">일반 회원가입</a>
                 &nbsp;&nbsp;&nbsp; / &nbsp;&nbsp;&nbsp;
                 <a href="/findpass">비밀번호 찾기</a>
               </div>
