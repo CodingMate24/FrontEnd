@@ -46,33 +46,40 @@ export default {
 </script>
 
 <template>
-  <div id="find">
-    <Header></Header>
-    <div id="main-section" class="row">
-      <div class="col-2">
+  <Header></Header>
+  <div class="bodysection">
+    <div class="row">
+      <div class="col-2" id="left-001" >
         <LeftSection></LeftSection>
       </div>
-      <div id="content-section" class="col-10 overflow-auto">
-        <div id="find_main">
-        <!-- START -->
-          <div class="row">
-            <div class="col-10" style="min-width: 411px;">
-              <div class="input-group mb-3">
-                <label class="input-group-text"><font-awesome-icon icon="magnifying-glass" style="font-size: 17px;"/></label>
-                <input type="text" class="form-control rounded-end" placeholder="검색어를 입력해주세요." aria-label="searchWord" aria-describedby="basic-addon1" style="margin-right: 5px;">
-                <button v-on:click="heartClick" class="btn btn-secondary rounded" type="button" id="button-addon2" style="z-index: 99;"><font-awesome-icon class="align-middle" icon="magnifying-glass" style="margin-right: 5px;"/>검색</button>
+      <div class="col-10 r-main">
+        <div id="find" class="overflow-y-scroll main-cont">
+          <div id="find_main">
+            <!-- START -->
+            <div class="row">
+              <div class="col-12" style="min-width: 411px;">
+                <div class="input-group mb-3">
+                  <label class="input-group-text"><font-awesome-icon icon="magnifying-glass" style="font-size: 17px;"/></label>
+                  <input type="text" class="form-control rounded-end" placeholder="검색어를 입력해주세요." aria-label="searchWord" aria-describedby="basic-addon1" style="margin-right: 5px;">
+                  <button v-on:click="heartClick" class="btn btn-secondary rounded" type="button" id="button-addon2" style="z-index: 99;"><font-awesome-icon class="align-middle" icon="magnifying-glass" style="margin-right: 5px;"/>검색</button>
+                </div>
               </div>
+              <!--
+              <div class="col-2">
+                  <div id="rightsection">
+                  </div>
+              </div>
+              -->
             </div>
-          </div>
-          <Find_begin ></Find_begin>
+            <Find_begin ></Find_begin>
 
-        <!-- END -->
+            <!-- END -->
+          </div>
         </div>
       </div>
     </div>
-
-    <Footer></Footer>
   </div>
+  <Footer></Footer>
 </template>
 
 <style>

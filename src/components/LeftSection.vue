@@ -25,68 +25,58 @@ export default {
 </script>
 
 <template>
-  <div id="left-section">
-    <div id="sidebar" class="row">
-      <div class="col">
+  <div id="leftsection">
+    <div id="sidebar">
+      <div class="nav flex-column">
         <div class="nav flex-column" v-for='route in routes.filter((c) => c.menuType === "M")' :key="route">
-          <router-link :to="route.menu" class="nav-item"><font-awesome-icon class="fa-1x icon-tmp" :icon="route.icon"/><span>{{route.title}}</span></router-link>
+        <router-link :to="route.menu" class="nav-item"><font-awesome-icon class="fa-1x icon-tmp" :icon="route.icon"/><span class="menu-item">{{route.title}}</span></router-link>
         </div>
       </div>
     </div>
-<!--    <router-link to="/logout" class="nav-item position-absolute bottom-0" style="margin-bottom: 10%;"><font-awesome-icon class="fa-1x icon-tmp" icon="arrow-right-from-bracket"/><span>로그아웃</span></router-link>-->
+    <!--    <router-link to="/logout" class="nav-item position-absolute bottom-0" style="margin-bottom: 10%;"><font-awesome-icon class="fa-1x icon-tmp" icon="arrow-right-from-bracket"/><span>로그아웃</span></router-link>-->
   </div>
 </template>
 
 <style>
-  #left-section {
-    padding-top: 50px;
+/* LeftSection Start */
+@media (min-width:1053px) {
+  #leftsection {
     padding-left: 30px;
-    max-width: 300px;
-    min-width: 100px;
-    margin-top: 15px;
-    margin-bottom: 15px;
-    text-decoration: none;
   }
+}
+#leftsection {
+  max-width: 300px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  text-decoration: none;
+}
 
-  #sidebar {
-    max-width: 300px;
-  }
+#sidebar {
+  max-width: 300px;
+}
 
-  .nav-item {
-    max-width: 200px;
-    margin-top: 10px;
-    height: 35px;
-    padding: 0;
-    text-decoration: none;
-    color : #282828;
-  }
+.nav-item {
+  max-width: 200px;
+  margin-top: 10px;
+  height: 35px;
+  padding: 10px 15px;
+  text-decoration: none;
+  color : #282828;
+}
 
-  .nav-item > span {
-    //border: #dee2e6 solid 1px;
-    font-size: 15px;
-    margin: 0 20px;
-    visibility: visible;
-  }
+.nav-item > span {
+  font-size: 15px;
+  margin: 0 20px;
+  visibility: visible;
+}
+@media (max-width:640px) {
 
-  @media (max-width:980px) {
-    .nav-item > span {
-      visibility: hidden;
-    }
-  }
 
-  @media (min-width:980px) {
+}
 
-  }
-
-  @media (min-width:200px) and (max-width:480px) {
-    #left-section {
-      padding-left: 22px;
-      min-width: 100px;
-    }
-  }
-
-  .nav-item:hover {
-    cursor: pointer;
-    font-weight: bold;
-  }
+.nav-item:hover {
+  cursor: pointer;
+  font-weight: bold;
+}
+/* LeftSection End */
 </style>

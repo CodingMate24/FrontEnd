@@ -1,7 +1,7 @@
 <template>
   <div id="header">
     <header class="border-bottom">
-      <div class="big-logo" />
+      <div class="big-logo"></div>
       <router-link to="/login" class="logout_btn"><font-awesome-icon class="fa-1x icon-tmp" icon="arrow-right-from-bracket"/><span> 로그아웃</span></router-link>
     </header>
   </div>
@@ -34,6 +34,7 @@ export default {
 
 <style>
 
+/* Header Start */
 header {
   padding: 15px 30px;
   display: flex;
@@ -54,16 +55,34 @@ header {
   text-decoration: none;
   color: #000;
   height: 35px;
-  margin: 0px;
+  margin: 0;
   padding-top: 5px;
+  padding-right: 20px;
 }
 #main-section {
   height: calc(100vh - 172px);
 }
 
-#content-section {
+.bodysection {
   height: calc(100vh - 172px);
-  border-left: #dee2e6 solid 1px;
   --bs-gutter-x: 0;
 }
+
+.main-cont{
+  padding: 20px 20px 0 20px;
+  height: calc(100vh - 172px);
+  scrollbar-width: thin;
+}
+
+.r-main {
+  height: calc(100vh - 172px);
+  border-left: 1px solid #eee;
+}
+
+@media (max-width:640px) {
+  .r-main {
+    border-left: 1px solid #eee;
+  }
+}
+/* Header End */
 </style>

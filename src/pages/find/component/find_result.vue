@@ -23,7 +23,7 @@ export default {
       <span id="result_title">검색결과</span>
     </div>
     <div id="result-content" class="row popular-row">
-      <div class="col-8">
+      <div class="col-12">
 
         <!-- card Start -->
         <div class="card card-result shadow bg-body rounded" style="max-width: 950px; min-height: 370px;">
@@ -184,8 +184,10 @@ export default {
         <!-- card end -->
 
       </div>
+      <!--
       <div class="col-2">
       </div>
+      -->
     </div>
   </div>
 </template>

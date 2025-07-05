@@ -23,7 +23,7 @@ export default {
       <span id="begin_title">인기글 TOP9</span>
     </div>
     <div id="begin-content" class="row">
-      <div class="col-10">
+      <div class="col-12">
         <div class="row popular-row">
           <div class="col-lg-4 col-md-12">
             <div class="card card-popular shadow bg-body rounded">
@@ -277,8 +277,10 @@ export default {
         </div>
 
       </div>
+      <!--
       <div class="col-2">
       </div>
+      -->
     </div>
   </div>
 </template>

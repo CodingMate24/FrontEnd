@@ -73,10 +73,9 @@ import LoginHeader from "@/components/LoginHeader.vue";
                     <div class="form-check">
                       <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
                       <!-- 일치 : is-valid, 불일치: is-invalid -->
-                      <label class="form-check-label" for="invalidCheck">
-                        이용약관에 동의합니다. <a href="/error">이용약관</a>
-                        <!--                    / <a href="/login">개인정보처리방침</a>-->
-                      </label>
+                      <label class="form-check-label" for="invalidCheck"> 이용약관에 동의합니다.</label>
+                       &nbsp;<a href="/error">이용약관</a>
+                      <!--                    / <a href="/login">개인정보처리방침</a>-->
                       <div class="invalid-feedback">
                         이용약관에 동의해야 회원가입 가능합니다.
                       </div>

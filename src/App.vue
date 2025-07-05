@@ -34,13 +34,26 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
    color: #2c3e50;
-  min-width: 540px;
+  min-width: 360px;
 }
 
 header {
   padding-left: 30px;
   padding-top: 15px;
   padding-bottom: 15px;
+}
+
+@media (max-width:1053px) {
+  .menu-item {
+    display: none;
+  }
+  #left-001 {
+    max-width: 60px;
+  }
+  #leftsection {
+    max-width: 60px;
+    padding-left: 0;
+  }
 }
 
 .big-logo {
