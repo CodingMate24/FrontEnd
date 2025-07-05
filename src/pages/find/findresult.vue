@@ -86,8 +86,6 @@ export default {
 <style>
 
 #find_main {
-  margin-left: 30px;
-  margin-right: 30px;
   margin-top: 20px;
 }
 </style>
