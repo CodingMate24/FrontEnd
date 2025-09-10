@@ -83,7 +83,6 @@ export default {
 </template>
 
 <style>
-
 #find_main {
   margin-top: 20px;
 }

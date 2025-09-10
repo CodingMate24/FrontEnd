@@ -25,7 +25,7 @@ export default {
     <div id="begin-content" class="row">
       <div class="col-12">
         <div class="row popular-row">
-          <div class="col-lg-4 col-md-12">
+          <div class="col-lg-6 col-md-12">
             <div class="card card-popular shadow bg-body rounded">
               <img id="popular-img" src="@/assets/추억.jpg" class="card-img-top border shadow" alt="...">
               <div class="card-body">
@@ -52,7 +52,7 @@ export default {
               </div>
             </div>
           </div>
-          <div class="col-lg-4 col-md-12">
+          <div class="col-lg-6 col-md-12">
             <div class="card card-popular shadow bg-body rounded">
               <img id="popular-img" src="..." class="card-img-top border shadow" alt="...">
               <div class="card-body">
@@ -79,91 +79,7 @@ export default {
               </div>
             </div>
           </div>
-          <div class="col-lg-4 col-md-12">
-            <div class="card card-popular shadow bg-body rounded">
-              <img id="popular-img" src="..." class="card-img-top border shadow" alt="...">
-              <div class="card-body">
-                <h5 id="popular-title" class="card-title">게시물 제목</h5>
-                <div class="row">
-                  <div class="card-text" style="text-align: left; display: flex">
-                    <div class="popular">
-                      <font-awesome-icon icon="far fa-heart" class="fa-1x align-middle" style="color:firebrick;"/>
-                      <span class="popular-count">99</span>
-                    </div>
-                    <div class="popular">
-                      <font-awesome-icon icon="far fa-comment" class="fa-1x align-middle" />
-                      <span class="popular-count">99</span>
-                    </div>
-                  </div>
-                </div>
-                <div class="popular" style="margin-top: 5px;">
-                  <!--
-                  <font-awesome-icon id="post_profile" icon="far fa-user" class="icons align-middle"/>
-                  -->
-                  <img src="@/assets/default_profile.png" class="popular-icons align-middle" style="width: 20px; height: 20px; border-radius: 12px;">
-                  <span id="popular_creator" style="font-size: 15px; margin-left:7px;">최윤정</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="row popular-row">
-          <div class="col-lg-4 col-md-12">
-            <div class="card card-popular shadow bg-body rounded">
-              <img id="popular-img" src="..." class="card-img-top border shadow" alt="...">
-              <div class="card-body">
-                <h5 id="popular-title" class="card-title">게시물 제목</h5>
-                <div class="row">
-                  <div class="card-text" style="text-align: left; display: flex">
-                    <div class="popular">
-                      <font-awesome-icon icon="far fa-heart" class="fa-1x align-middle" style="color:firebrick;"/>
-                      <span class="popular-count">99</span>
-                    </div>
-                    <div class="popular">
-                      <font-awesome-icon icon="far fa-comment" class="fa-1x align-middle" />
-                      <span class="popular-count">99</span>
-                    </div>
-                  </div>
-                </div>
-                <div class="popular" style="margin-top: 5px;">
-                  <!--
-                  <font-awesome-icon id="post_profile" icon="far fa-user" class="icons align-middle"/>
-                  -->
-                  <img src="@/assets/default_profile.png" class="popular-icons align-middle" style="width: 20px; height: 20px; border-radius: 12px;">
-                  <span id="popular_creator" style="font-size: 15px; margin-left:7px;">최윤정</span>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-12">
-            <div class="card card-popular shadow bg-body rounded">
-              <img id="popular-img" src="..." class="card-img-top border shadow" alt="...">
-              <div class="card-body">
-                <h5 id="popular-title" class="card-title">게시물 제목</h5>
-                <div class="row">
-                  <div class="card-text" style="text-align: left; display: flex">
-                    <div class="popular">
-                      <font-awesome-icon icon="far fa-heart" class="fa-1x align-middle" style="color:firebrick;"/>
-                      <span class="popular-count">99</span>
-                    </div>
-                    <div class="popular">
-                      <font-awesome-icon icon="far fa-comment" class="fa-1x align-middle" />
-                      <span class="popular-count">99</span>
-                    </div>
-                  </div>
-                </div>
-                <div class="popular" style="margin-top: 5px;">
-                  <!--
-                  <font-awesome-icon id="post_profile" icon="far fa-user" class="icons align-middle"/>
-                  -->
-                  <img src="@/assets/default_profile.png" class="popular-icons align-middle" style="width: 20px; height: 20px; border-radius: 12px;">
-                  <span id="popular_creator" style="font-size: 15px; margin-left:7px;">최윤정</span>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-12">
+          <div class="col-lg-6 col-md-12">
             <div class="card card-popular shadow bg-body rounded">
               <img id="popular-img" src="..." class="card-img-top border shadow" alt="...">
               <div class="card-body">
@@ -193,7 +109,7 @@ export default {
         </div>
 
         <div class="row popular-row">
-          <div class="col-lg-4 col-md-12">
+          <div class="col-lg-6 col-md-12">
             <div class="card card-popular shadow bg-body rounded">
               <img id="popular-img" src="..." class="card-img-top border shadow" alt="...">
               <div class="card-body">
@@ -220,7 +136,7 @@ export default {
               </div>
             </div>
           </div>
-          <div class="col-lg-4 col-md-12">
+          <div class="col-lg-6 col-md-12">
             <div class="card card-popular shadow bg-body rounded">
               <img id="popular-img" src="..." class="card-img-top border shadow" alt="...">
               <div class="card-body">
@@ -247,7 +163,91 @@ export default {
               </div>
             </div>
           </div>
-          <div class="col-lg-4 col-md-12">
+          <div class="col-lg-6 col-md-12">
+            <div class="card card-popular shadow bg-body rounded">
+              <img id="popular-img" src="..." class="card-img-top border shadow" alt="...">
+              <div class="card-body">
+                <h5 id="popular-title" class="card-title">게시물 제목</h5>
+                <div class="row">
+                  <div class="card-text" style="text-align: left; display: flex">
+                    <div class="popular">
+                      <font-awesome-icon icon="far fa-heart" class="fa-1x align-middle" style="color:firebrick;"/>
+                      <span class="popular-count">99</span>
+                    </div>
+                    <div class="popular">
+                      <font-awesome-icon icon="far fa-comment" class="fa-1x align-middle" />
+                      <span class="popular-count">99</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="popular" style="margin-top: 5px;">
+                  <!--
+                  <font-awesome-icon id="post_profile" icon="far fa-user" class="icons align-middle"/>
+                  -->
+                  <img src="@/assets/default_profile.png" class="popular-icons align-middle" style="width: 20px; height: 20px; border-radius: 12px;">
+                  <span id="popular_creator" style="font-size: 15px; margin-left:7px;">최윤정</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row popular-row">
+          <div class="col-lg-6 col-md-12">
+            <div class="card card-popular shadow bg-body rounded">
+              <img id="popular-img" src="..." class="card-img-top border shadow" alt="...">
+              <div class="card-body">
+                <h5 id="popular-title" class="card-title">게시물 제목</h5>
+                <div class="row">
+                  <div class="card-text" style="text-align: left; display: flex">
+                    <div class="popular">
+                      <font-awesome-icon icon="far fa-heart" class="fa-1x align-middle" style="color:firebrick;"/>
+                      <span class="popular-count">99</span>
+                    </div>
+                    <div class="popular">
+                      <font-awesome-icon icon="far fa-comment" class="fa-1x align-middle" />
+                      <span class="popular-count">99</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="popular" style="margin-top: 5px;">
+                  <!--
+                  <font-awesome-icon id="post_profile" icon="far fa-user" class="icons align-middle"/>
+                  -->
+                  <img src="@/assets/default_profile.png" class="popular-icons align-middle" style="width: 20px; height: 20px; border-radius: 12px;">
+                  <span id="popular_creator" style="font-size: 15px; margin-left:7px;">최윤정</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6 col-md-12">
+            <div class="card card-popular shadow bg-body rounded">
+              <img id="popular-img" src="..." class="card-img-top border shadow" alt="...">
+              <div class="card-body">
+                <h5 id="popular-title" class="card-title">게시물 제목</h5>
+                <div class="row">
+                  <div class="card-text" style="text-align: left; display: flex">
+                    <div class="popular">
+                      <font-awesome-icon icon="far fa-heart" class="fa-1x align-middle" style="color:firebrick;"/>
+                      <span class="popular-count">99</span>
+                    </div>
+                    <div class="popular">
+                      <font-awesome-icon icon="far fa-comment" class="fa-1x align-middle" />
+                      <span class="popular-count">99</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="popular" style="margin-top: 5px;">
+                  <!--
+                  <font-awesome-icon id="post_profile" icon="far fa-user" class="icons align-middle"/>
+                  -->
+                  <img src="@/assets/default_profile.png" class="popular-icons align-middle" style="width: 20px; height: 20px; border-radius: 12px;">
+                  <span id="popular_creator" style="font-size: 15px; margin-left:7px;">최윤정</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6 col-md-12">
             <div class="card card-popular shadow bg-body rounded">
               <img id="popular-img" src="..." class="card-img-top border shadow" alt="...">
               <div class="card-body">

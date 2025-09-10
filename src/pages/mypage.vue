@@ -2,12 +2,13 @@
 import Header from "@/components/Header.vue";
 import Footer from "@/components/Footer.vue";
 import LeftSection from "@/components/LeftSection.vue";
+import MypageBoard from "@/pages/mypage/board.vue";
 import {FontAwesomeIcon} from "@fortawesome/vue-fontawesome";
 import Router from "../router/index.js";
 import {ref, onBeforeMount} from "vue";
 
 export default {
-  components: {FontAwesomeIcon, Footer, Header, LeftSection},
+  components: {FontAwesomeIcon, Footer, Header, LeftSection, MypageBoard},
   setup(){
     const routes = ref([])
 
@@ -70,7 +71,7 @@ export default {
                 </nav>
                 <div class="tab-content" id="nav-tabContent">
                   <div class="tab-pane fade show active" id="nav-write" role="tabpanel" aria-labelledby="nav-write-tab" tabindex="0">
-                    게시글 내용
+                    <MypageBoard></MypageBoard>
                   </div>
                   <div class="tab-pane fade" id="nav-comment" role="tabpanel" aria-labelledby="nav-comment-tab" tabindex="0">
                     댓글 내용
@@ -142,4 +143,5 @@ export default {
 .nav-tabs > .active {
   font-weight: bold;
 }
+
 </style>

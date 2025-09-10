@@ -72,6 +72,8 @@ header {
   padding: 20px 20px 0 20px;
   height: calc(100vh - 172px);
   scrollbar-width: thin;
+  overflow-x: hidden;
+  max-width: 1660px;
 }
 
 .r-main {
@@ -79,10 +81,28 @@ header {
   border-left: 1px solid #eee;
 }
 
-@media (max-width:640px) {
+/* Mobile Device */
+@media all and (max-width:768px) {
   .r-main {
     border-left: 1px solid #eee;
   }
+  .col-10 {
+    flex: 0 0 auto;
+    width: 88% !important;
+  }
 }
+/* Tablet Device */
+@media all and (min-width:768px) and (max-width:1056px) {
+  .col-10 {
+    flex: 0 0 auto;
+    width: 92% !important;
+  }
+}
+
+/* Desktop Device */
+@media all and (min-width:1025px) {
+
+}
+
 /* Header End */
 </style>
